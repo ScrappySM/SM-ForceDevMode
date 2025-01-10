@@ -1,16 +1,22 @@
-# Getting started
+# Force Dev Mode
 
-Welcome to your new DLL mod, you should see you now have a `SM-ForceDevMode.sln` file, all the files you see here were generated from the template.
+When the game Scrap Mechanic is launched the flag `-dev` can be passed, this mod essentially makes it so that dev mode is always enabled regardless of the flag being passed or not, this is useful for if you don't want the console that `-dev` enables but still want the hot reloading feature. It may also be useful if you're already running the game and don't want to restart it to enable dev mode.
 
-## Usage
+An explanation of how this mod works is available in the [dllmain](dllmain.cpp) file at the top.
 
-1. Clone this repository locally
-2. Open the `SM-ForceDevMode.sln` file in Visual Studio
-3. Make your changes in `dllmain.cpp`, pressing "Local Windows Debugger" will build and run the game with your mod injected.
-4. Add a description to your mod and adjust any of the necessary fields in [manifest.json](manifest.json)
-5. When you are ready to release your mod, [commit](https://github.com/git-guides/git-commit), [tag](https://www.slingacademy.com/article/working-with-git-tags-a-complete-guide-with-examples/) your commit and push your changes to GitHub.
-6. You can then view the https://github.com/BenMcAvoy/SM-ForceDevMode/releases to see your mod's release page, edit the draft and publish it when you are ready.
+## Installation
+
+The recommended method of installing this is [Carbon Launcher](https://github.com/ScrappySM/CarbonLauncher) which is maintained by me and will let you simply press download and launch the game!
+However, there are many other ways. Here's a launcher agnostic way of installing this mod:
+- Go to releases and download the latest `.dll` file.
+- Open a tool like Process Hacker/System Informer and find the process of Scrap Mechanic.
+- Inject the `.dll` file as a module into the process.
+- You can also use a tool like [SM-DLL-Injector](https://github.com/QuestionableM/SM-DLL-Injector) maintained by [QuestionableM](https://github.com/QuestionableM) and will let you simply inject any DLL files in a folder called `DllModules`, you could use this project and put the `.dll` file in the folder and it will automatically inject it for you.
+
+## Building
+
+To build this project you will need to have Visual Studio installed and then you can simply open the `.sln` file and press build, it is recommended to build in Release mode as it will be smaller and faster.
 
 ## License
 
-You should change the authors or the entire license in the [LICENSE](LICENSE) file to your liking, this template is licensed under The MIT-0 license meaning no attribution is required to use this template - see the [LICENSE](LICENSE) file for details, meaning you can do whatever you want with this template! (yes, you can change the license)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
