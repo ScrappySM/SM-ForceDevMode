@@ -2,7 +2,7 @@
 
 When the game Scrap Mechanic is launched the flag `-dev` can be passed, this mod essentially makes it so that dev mode is always enabled regardless of the flag being passed or not, this is useful for if you don't want the console that `-dev` enables but still want the hot reloading feature. It may also be useful if you're already running the game and don't want to restart it to enable dev mode.
 
-An explanation of how this mod works is available in the [dllmain](dllmain.cpp) file at the top.
+An explanation of how this mod works is available in the [dllmain](SM-ForceDevMode/src/dllmain.cpp) file at the top.
 
 ## Installation
 
