@@ -10,14 +10,10 @@
 #include <Windows.h>
 #include <iostream>
 
-#include "log.h"
-
 static constexpr uintptr_t DevModeFlag = 0x1267537;
 static char oldFlag = 0;
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved) {
-	Log_t logRAII;
-
 	if (dwReason == DLL_PROCESS_ATTACH) {
 		DisableThreadLibraryCalls(hModule);
 
